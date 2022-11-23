@@ -40,12 +40,12 @@ while True:
         # find max indexed array
         max_index = np.argmax(predictions[0])
 
-        emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'surprise', 'neutral')
+        emotions = ('angry', 'disgust', 'fear', 'happy', 'sad', 'su                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                rprise', 'neutral')
         predicted_emotion = emotions[max_index]
 
         cv2.putText(test_img, predicted_emotion, (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
 
-    resized_img = cv2.resize(test_img, (1000, 700))
+    resized_img = cv2.resize(test_img, (700, 500))
     cv2.imshow('Facial emotion analysis ', resized_img)
 
     if cv2.waitKey(10) == ord('q'):  # wait until 'q' key is pressed
